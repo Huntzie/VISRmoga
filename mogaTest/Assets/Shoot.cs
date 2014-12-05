@@ -5,7 +5,7 @@ public class Shoot : MonoBehaviour {
 
     public GameObject bullet;
     public float nextShot;
-    public float shotCooldown = 1;
+    public float shotCooldown = 1000;
 	// Use this for initialization
 	void Start () {    
         nextShot = Time.time;
@@ -22,5 +22,10 @@ public class Shoot : MonoBehaviour {
                 nextShot = Time.time + shotCooldown;
             }
         }
+        
+       
+        
+      
+       
 	}
 }

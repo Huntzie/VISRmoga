@@ -52,12 +52,15 @@ public class RotateCube : MonoBehaviour {
 	
 		if (mogaFound)
 		{
-			this.transform.Rotate( 0, -Input.GetAxis("Horizontal"), 0, Space.World );
-        	this.transform.Rotate( Input.GetAxis ("Vertical"), 0, 0, Space.World );
+
+
+			this.transform.Rotate( 0, Input.GetAxis("Horizontal"), 0, Space.World );
+            this.transform.Rotate(Input.GetAxis("Vertical"), 0, 0, Space.World);
 		
 			if (Input.GetKeyDown(aButtonKeyCode))
 			{
 				this.renderer.material.color = Color.red;
+                BulletController bullet = new BulletController();
 			}
 			else if (Input.GetKeyUp(aButtonKeyCode))
 			{

@@ -50,7 +50,7 @@
      <Compile Include="Assets\Editor\Moga_Setup.cs" />
      <Compile Include="Assets\Editor\PostProcessBuildPlayer_Moga.cs" />
  <Reference Include="Assembly-UnityScript">
- <HintPath>C:/Users/Thomas/Desktop/mogaTest/Library/ScriptAssemblies/Assembly-UnityScript.dll</HintPath>
+ <HintPath>C:/Users/Thomas/Desktop/VISRmoga.git/trunk/mogaTest/Library/ScriptAssemblies/Assembly-UnityScript.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.Graphs">
  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEditor.Graphs.dll</HintPath>
