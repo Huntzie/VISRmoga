@@ -51,12 +51,15 @@ public class RotateCube : MonoBehaviour {
 	void Update () {
 	
 		if (mogaFound)
-		{
+        {
 
-
-			this.transform.Rotate( 0, Input.GetAxis("Horizontal"), 0, Space.World );
-            this.transform.Rotate(Input.GetAxis("Vertical"), 0, 0, Space.World);
-		
+#if UNITY_EDITOR
+			this.transform.Rotate( 0, 0, -Input.GetAxis("Horizontal") * 2.0f, Space.Self );
+            this.transform.Rotate(-Input.GetAxis("Vertical"), 0, 0, Space.Self);
+#else
+            this.transform.Rotate(0, 0, -Input.GetAxis("Horizontal") * 2.0f, Space.Self);
+            this.transform.Rotate(-Input.GetAxis("LookVertical"), 0, 0, Space.Self);
+#endif
 			if (Input.GetKeyDown(aButtonKeyCode))
 			{
 				this.renderer.material.color = Color.red;
