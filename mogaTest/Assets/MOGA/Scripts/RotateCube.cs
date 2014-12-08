@@ -54,11 +54,11 @@ public class RotateCube : MonoBehaviour {
         {
 
 #if UNITY_EDITOR
-			this.transform.Rotate( 0, 0, -Input.GetAxis("Horizontal") * 2.0f, Space.Self );
-            this.transform.Rotate(-Input.GetAxis("Vertical"), 0, 0, Space.Self);
+			this.transform.Rotate( 0, 0, -Input.GetAxis("Horizontal") * 10.0f, Space.Self );
+            this.transform.Rotate(Input.GetAxis("Vertical") * 5.0f, 0, 0, Space.Self);
 #else
             this.transform.Rotate(0, 0, -Input.GetAxis("Horizontal") * 2.0f, Space.Self);
-            this.transform.Rotate(-Input.GetAxis("LookVertical"), 0, 0, Space.Self);
+            this.transform.Rotate(Input.GetAxis("LookVertical"), 0, 0, Space.Self);
 #endif
 			if (Input.GetKeyDown(aButtonKeyCode))
 			{
